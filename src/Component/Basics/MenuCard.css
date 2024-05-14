@@ -1,0 +1,340 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap");
+
+
+.main-card--cointainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    margin: 10px;
+    margin-right: 10px;
+}
+
+.card-container {
+    /* font-family: "Cormorant Garamond", serif; */
+    border: 2px solid black;
+    margin: 10px;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* justify-content: center; */
+    justify-content: space-evenly;
+}
+
+.card-container img {
+    width: 600px;
+    height: 600px;
+}
+
+.card-body {
+    /* font-family: "Cormorant Garamond", serif; */
+    font-family: "Lato", sans-serif;
+
+    height: 300px;
+    font-size: 30px;
+    font-weight: bolder;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.price{
+    font-size: 2rem;
+}
+
+
+.endCont {
+    height: 100%;
+    font-size: 20px;
+    font-weight: bolder;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+
+
+
+/* new code  */
+
+
+.delay-4 h2 {
+    
+    text-align: center;
+    color: black;
+}
+
+p {
+    font-size: max(10pt, 2.5vmin);
+    line-height: 1.4;
+    color: #cfbaba;
+    margin-bottom: 1.5rem;
+}
+
+.wrap {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 120vmin;
+    height: 65vmin;
+    margin: 2rem auto;
+    border: 8px solid;
+
+    transition: 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+@media screen and (max-width: 900px) {
+
+    .wrap {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        width: 85vmin;
+        height: 65vmin;
+        margin: 2rem auto;
+        border: 8px solid;
+
+        transition: 0.3s ease-in-out;
+        position: relative;
+        overflow: hidden;
+    }
+
+}
+
+.overlay {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    padding: 1rem 0.75rem;
+    transition: 0.4s ease-in-out;
+    z-index: 1;
+}
+
+.overlay-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 15vmin;
+    height: 100%;
+    padding: 0.5rem 0 0 0.5rem;
+    border: 3px solid;
+    border-image: linear-gradient(to bottom,
+            #aea724 5%,
+            forestgreen 35% 65%,
+            #aea724 95%) 0 0 0 100%;
+    transition: 0.3s ease-in-out 0.2s;
+    z-index: 1;
+}
+
+.image-content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60vmin;
+    height: 100%;
+    /* background-image: url("https://assets.codepen.io/4787486/trees.png"); */
+    background-color: #1e1d1d;
+    background-size: cover;
+    transition: 0.3s ease-in-out;
+    /* border: 1px solid green; */
+}
+
+.inset {
+
+    width: 110%;
+    height: 300px;
+    margin: 0.25em;
+    margin-bottom: 20px;
+    border-radius: 0.25em;
+    float: left;
+}
+.inset0{
+    object-fit: cover;
+    height: 100%;
+}
+
+
+.text {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60vmin;
+    height: 100%;
+    padding: 3vmin 4vmin;
+    background: #252526;
+    box-shadow: inset 1px 1px 15px 0 rgba(0 0 0 / 0.4);
+    overflow-y: scroll;
+}
+
+.wrap:hover .overlay {
+    transform: translateX(-60vmin);
+}
+
+.wrap:hover .image-content {
+    width: 30vmin;
+}
+
+.wrap:hover .overlay-content {
+    border: none;
+    transition-delay: 0.2s;
+    transform: translateX(60vmin);
+}
+
+.wrap:hover .dots {
+    transform: translateX(1rem);
+}
+
+.wrap:hover .dots .dot {
+    background: white;
+}
+
+/* Animations and timing delays */
+.animate {
+    animation-duration: 0.7s;
+    animation-timing-function: cubic-bezier(0.26, 0.53, 0.74, 1.48);
+    animation-fill-mode: backwards;
+}
+
+/* Pop In */
+.pop {
+    animation-name: pop;
+}
+
+@keyframes pop {
+    0% {
+        opacity: 0;
+        transform: scale(0.5, 0.5);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1, 1);
+    }
+}
+
+/* Slide In */
+.slide {
+    animation-name: slide;
+}
+
+@keyframes slide {
+    0% {
+        opacity: 0;
+        transform: translate(4em, 0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}
+
+/* Slide Left */
+.slide-left {
+    animation-name: slide-left;
+}
+
+@keyframes slide-left {
+    0% {
+        opacity: 0;
+        transform: translate(-40px, 0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}
+
+.slide-up {
+    animation-name: slide-up;
+}
+
+@keyframes slide-up {
+    0% {
+        opacity: 0;
+        transform: translateY(3em);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.delay-1 {
+    animation-delay: 0.3s;
+}
+
+.delay-2 {
+    animation-delay: 0.6s;
+}
+
+.delay-3 {
+    animation-delay: 0.9s;
+}
+
+.delay-4 {
+    animation-delay: 1.2s;
+    font-size: 5.25vmin;
+}
+
+.delay-5 {
+    animation-delay: 1.5s;
+}
+
+.delay-6 {
+    animation-delay: 1.8s;
+}
+
+.delay-7 {
+    animation-delay: 2.1s;
+}
+
+.delay-8 {
+    animation-delay: 2.4s;
+}
+
+
+
+
+
+
+
+
+/* Button  */
+
+
+.glowing-btn{
+    font-size: 1.5rem;
+    padding: 10px;
+    min-height: 50px;
+    background-color: #252526;
+    color: #03e9f4;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    letter-spacing: 2px;
+    overflow: hidden;
+    transition: 0.5s;
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
+  
+.glowing-btn:hover{
+      background: #03e9f4;
+      color: #050801;
+      box-shadow: 0 0 5px #03e9f4,
+                  0 0 25px #03e9f4,
+                  0 0 50px #03e9f4,
+                  0 0 200px #03e9f4;
+       -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
+  }

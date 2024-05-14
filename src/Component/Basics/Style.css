@@ -1,0 +1,578 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap");
+
+* {
+   
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Luckiest Guy", cursive;
+    font-weight: 400;
+    font-style: normal;    
+    /* color: #cfbaba; */
+    color: rgb(125, 177, 146);
+    background-color: #252526;
+   
+    
+  }
+
+  
+
+
+   .rat {
+    height: 75px;
+   }
+  .rat ul {
+    font-family: 'Bungee Inline', cursive;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    /* background-color: rgb(169, 169, 99); */
+  }
+
+
+  /* CSS */
+  .rat .act {
+    background-color: rgb(83, 83, 72);
+    border: 0 solid #E5E7EB;
+    box-sizing: border-box;
+    color: white;
+    display: inline-flex;
+    /* flex-direction: column; */
+    font-family: ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size: 1rem;
+    font-weight: 700;
+    justify-content: center;
+    line-height: 1.75rem;
+    padding: .75rem 1.65rem;
+    /* position: relative; */
+    margin: 13px 7px;
+    text-align: center;
+    text-decoration: none #000000 solid;
+    text-decoration-thickness: auto;
+    width: 100%;
+    max-width: 120px;
+    /* position: relative; */
+    cursor: pointer;
+    transform: rotate(0deg);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  
+  .rat .act:focus {
+    outline: 0;
+  }
+  
+  .rat .act::before{
+    content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-color: #000;
+  -webkit-transform: scaleY(.3);
+  transform: scaleY(.3);
+  opacity: 0;
+  transition: all .3s
+  }
+  
+  .rat .act:hover{
+    color:#6098FF;  
+  }
+  .rat .act:hover::before{
+    opacity: 1;
+    background-color: #fff;
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+    transition: -webkit-transform .6s cubic-bezier(.08, .35, .13, 1.02), opacity .4s;
+    transition: transform .6s cubic-bezier(.08, .35, .13, 1.02), opacity
+  }
+
+  .head{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #1e1d1d;
+  }
+
+  .head .innerHead{
+    background-color: #1e1d1d;
+
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+  }
+
+    .head h2{
+    /* cursor: alias; */
+    font-family: 'Bungee Inline', cursive;
+    font-size: x-large;
+    background-color: #1e1d1d;
+    display: flex;
+
+    width: 90%;
+    /* flex-wrap: wrap; */
+    flex-direction: column;
+    float: center;
+    color: rgb(255, 255, 255);
+    /* text-align: center; */
+    padding: 14px 10px;
+    text-decoration: none;
+  }
+  .head img{
+    margin: 14px 10px;
+    background-color: #1e1d1d;
+  }
+
+
+  html {
+    background: #ffffff;
+    background-image: url(https://s3.postimg.org/s1n3ji1ur/paper_fibers_2_X.png);
+    box-sizing: border-box;
+    font-family: "Lato", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  
+
+
+  /* ---------- Button styles ------------------ */
+  
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    background-color: #252526;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+    justify-content: center;
+  }
+  
+  .navbar h1 {
+    padding-bottom: 20px;
+    text-transform: capitalize;
+  }
+  
+  /** button group styles **/
+  .btn-group {
+    border: 4px solid rgb(206, 81, 81);
+    margin-left: 150px;
+    margin-right: 150px;
+    border-radius: 20px;
+    text-transform: capitalize;
+  }
+
+  
+
+  .btn-group__item {
+    border: none;
+    padding: 1.5rem 3rem;
+    background-color: #252526;
+    cursor: pointer;
+    margin: 0;
+    font-size: 17px;
+    font-weight: bold;
+    box-shadow: inset 0px 0px 0px -15px #000000;
+    transition: all 300ms ease-out;
+    text-transform: capitalize;
+  }
+  
+  .btn-group__item:hover,
+  .btn-group__item:focus {
+    color: rebeccapurple;
+    box-shadow: inset 0px -20px 0px -15px rebeccapurple;
+  }
+  .btn-group__item:focus {
+    outline: none;
+  }
+  .btn-group__item:after {
+    content: "✔️";
+    margin-left: 0.5rem;
+    display: inline-block;
+    color: rebeccapurple;
+    position: absolute;
+    transform: translatey(10px);
+    opacity: 0;
+    transition: all 200ms ease-out;
+  }
+  .btn-group__item--active:after {
+    opacity: 1;
+    transform: translatey(-2px);
+  }
+  
+
+  @media (max-width: 595px){
+    .input-group__label{
+      margin-top: 55px;
+
+    }
+    #myInput{
+      margin-top: 55px;
+    }
+    footer{
+      background-color: black;
+      /* margin-top: 10px; */
+      font-size: 12px;
+      font-weight: bold;
+      height: 299px;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: "Cormorant Garamond", serif;
+    }
+    
+    .btn-group{
+      border: none;
+      margin-left: 5px;
+      margin-right: 5px;
+    }
+
+    .btn-group__item{
+      display: block;
+      /* flex-direction: column; */
+      font-size: 5px;
+      padding: 1px 1px;
+    }
+  }
+ 
+
+  /* footer  */
+footer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 0;
+  bottom: 0;
+  height: 50px;
+  width: 100%;
+  background-color: #1e1d1d;
+  color: white;
+  text-align: center;
+
+
+}
+
+
+/* Contact */
+
+
+.container1{
+  margin: 80px 409px;
+
+}
+
+.card {
+  /* Styling */
+  width: 700px;
+  height: 400px;
+  background: rgb(247, 189, 189);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);  
+  
+  /* Card flipping effects */
+  transform-style: preserve-3d;
+  transition: 0.6s; 
+}
+.side {
+  position: absolute;
+  width: 91%;
+  height: 86%;
+  backface-visibility: hidden;
+  /* Fix Chrome rendering bug */
+  transform: rotate(0deg) translateZ(1px);
+}
+
+/* Flip the card on hover */
+.container1:hover .card,
+.back {
+  transform: rotateY(-180deg) translateZ(1px);
+}
+
+/* Front styling */
+.front {
+  /* Center the name + outline (almost) */
+  
+
+  line-height: 330px; /* Height - some (because visual center is a little higher than actual center) */
+  text-align: center;
+}
+.logo {
+  outline: 1px solid #19F6E8;
+  display: inline-block;
+  padding: 15px 40px;
+  
+  text-transform: uppercase;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.4em;
+  font-weight: normal;
+  line-height: 32px;
+  letter-spacing: 8px;
+}
+
+/* Back styling */
+.back {
+  background: #ffffff;
+  /* padding: $padding; */
+}
+.name {
+  color: #3B3B3B;
+  margin-bottom: 0;
+}
+/* p {
+  margin: 0.8em 0;
+} */
+.info {
+  
+  position: absolute;
+ 
+  color: #3b3b3b;
+}
+.property {
+  color: #ffffff;
+}
+.info p{
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Make semi-responsive */
+@media (max-width:700px) {
+  .card { transform: scale(.5); }
+  .container:hover .card { transform: scale(.5) rotateY(-180deg) translateZ(1px); }
+}
+
+
+
+
+/* Dropdown styles */
+
+.menu,
+.submenu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Main level */
+
+
+.container0 {
+  width: 100%;
+  /* background: linear-gradient(100deg, #402, #006); */
+  padding: 2em;
+  /* min-height: 100vh; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: #ffffff; */
+  
+  /* background-position: 50% 50%; */
+  /* animation: background-move 10s linear infinite; */
+  /* background-size: 100vw auto, 100% 100%; */
+  /* background-size: unquote('max(100vw, 30em)') auto, 100% 100%; */
+}
+
+@keyframes background-move {
+  0% { background-position: 0 0, 0 0; }
+  100% { 
+    background-position: 100vw 0, 0 0;
+    background-position: unquote('max(100vw, 40em)')  0, 0 0;
+  }
+}
+
+.input-group {
+  width: 100%;
+  max-width: 20em;
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+}
+
+.input-group__label {
+  padding: 0 0.5em;
+  margin-bottom: 0.5em;
+  text-transform: uppercase;
+  font-size: 0.875em;
+  letter-spacing: 0.1em;
+  color: #ccd;
+  color: rgba(255, 220, 255, 0.6);
+  cursor: pointer;
+}
+
+.input-group__input {
+  color: #fff;
+  font-size: 1.25rem;
+  line-height: 1;
+  border-style: none;
+  outline: none;
+  height: calc(1em + 1.6em + 0.5em);
+  width: 100%;
+  padding: 0.8em 1em;
+  border: 0.25em solid transparent;
+  background-image: linear-gradient(#000, #000),
+    linear-gradient(120deg, #f09 0%, #0ff 50%, #9f0 100%);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  border-radius: 3.8em;
+  background-size: 200% 100%;
+  transition: background-position 0.8s ease-out;
+}
+
+.input-group__input:hover {
+  background-position: 100% 0;
+}
+
+/* .input-group__input:focus {
+  outline: 2px dashed #ad2b89;
+  outline-offset: 0.5em;
+} */
+
+/* Specific styles when mix-blend-mode is supported */
+@supports (mix-blend-mode: darken) {
+  .input-group {
+    position: relative;
+    mix-blend-mode: lighten;
+  }
+
+  .input-group__label {
+    position: absolute;
+    left: 3em;
+    top: -0.28em;
+    background: #000;
+  }
+}
+
+
+/* Search button  */
+#myInput{
+  min-height: 30px;
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 100%;
+    font-size: 1.3rem;
+    border: 3px solid #aaa;
+    border-radius: 10px;
+    background-color: #333;
+    color: #fff;
+    outline: none;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+  background-color: #252526;
+}
+
+.dropbtn {
+  color: #fff;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn:hover {
+  background-color: #252526;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #252526;
+  min-width: 160px;
+  z-index: 1;
+}
+
+.dropdown-content button {
+  color: #fff;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  background-color: #252526;
+  border: none;
+  width: 100%;
+  text-align: left;
+}
+
+.dropdown-content button:hover {
+  background-color: #252526;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #252526;
+}
+.google-button {
+   background-image: linear-gradient(#464d55, #25292e);;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.google-button:hover {
+  background-color: #c23321;
+}
+
+
+/* CSS */
+/* .google-button {
+  align-items: center;
+  background-color: initial;
+  background-image: linear-gradient(#464d55, #25292e);
+  border-radius: 8px;
+  border-width: 0;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, .1),0 3px 6px rgba(0, 0, 0, .05);
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  flex-direction: column;
+  font-family: expo-brand-demi,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-size: 18px;
+  height: 50px;
+  justify-content: center;
+  line-height: 1;
+  margin: 0;
+  outline: none;
+  overflow: hidden;
+  padding: 0 30px;
+  text-align: center;
+  text-decoration: none;
+  transform: translate3d(0, 0, 0);
+  transition: all 150ms;
+  vertical-align: baseline;
+  white-space: nowrap;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.google-button:hover {
+  box-shadow: rgba(0, 1, 0, .2) 0 2px 8px;
+  opacity: .85;
+}
+
+.google-button:active {
+  outline: 0;
+}
+
+.google-button:focus {
+  box-shadow: rgba(0, 0, 0, .5) 0 0 0 3px;
+}
+
+@media (max-width: 420px) {
+  .google-button {
+    height: 48px;
+  }
+} */

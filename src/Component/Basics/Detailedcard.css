@@ -1,0 +1,52 @@
+.detailCont{
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+
+}
+
+
+.innerDetails{
+  /* background-color: blue; */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.imageSlider{
+    width: 60%;
+    height: 60%;
+}
+
+.innerDetails h1,p,.button-62{
+    margin-bottom: 20px;
+
+}
+
+
+
+.innerDetails h1{
+  margin-top: 20px;
+  font-size: 3rem;
+}
+
+@media screen and (max-width: 1150px)  {
+
+  .details{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+    margin-top: 80px;
+  }
+  .imageSlider{
+    width: 100%;
+    height: 500px;
+  }
+  
+}
