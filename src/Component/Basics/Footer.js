@@ -4,7 +4,7 @@ function Footer() {
   return (
     <>
     <footer>
-        copyright &copy; 4KWallpaperWebsite All rights reserved.
+        copyright &copy; G2-Hotel-Booking All rights reserved.
       </footer>
     </>
   )
