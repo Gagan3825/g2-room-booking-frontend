@@ -5,6 +5,9 @@ import Footer from "./Footer";
 import axios from "axios";
 import Navbar from "../Navbar";
 
+const backend=process.env.REACT_APP_BACKEND_ID
+
+
 const Contact = () => {
   const [name, setname] = useState('');
   const [message, setmessage] = useState('');
@@ -12,7 +15,7 @@ const Contact = () => {
   const handleSubmit = async(e) => {
     e.preventDefault();
     try{
-       const check= await axios.post("http://localhost:4001/contact",{name,email,message});
+       const check= await axios.post(`${backend}/contact`,{name,email,message});
         if(check.data==="success"){
             alert("email sent")
             setname('')
