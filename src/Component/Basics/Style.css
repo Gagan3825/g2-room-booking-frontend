@@ -1,14 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 * {
    
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Luckiest Guy", cursive;
+    /* font-family: "Luckiest Guy", cursive;
     font-weight: 400;
-    font-style: normal;    
+    font-style: normal;     */
     /* color: #cfbaba; */
+    font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-style: normal;
     color: rgb(125, 177, 146);
     background-color: #252526;
    
@@ -193,7 +197,7 @@
     outline: none;
   }
   .btn-group__item:after {
-    content: "✔️";
+    content: "✔";
     margin-left: 0.5rem;
     display: inline-block;
     color: rebeccapurple;
@@ -525,54 +529,10 @@ footer{
 }
 
 
-/* CSS */
-/* .google-button {
-  align-items: center;
-  background-color: initial;
-  background-image: linear-gradient(#464d55, #25292e);
-  border-radius: 8px;
-  border-width: 0;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, .1),0 3px 6px rgba(0, 0, 0, .05);
-  box-sizing: border-box;
-  color: #fff;
-  cursor: pointer;
-  display: inline-flex;
-  flex-direction: column;
-  font-family: expo-brand-demi,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-  font-size: 18px;
-  height: 50px;
-  justify-content: center;
-  line-height: 1;
-  margin: 0;
-  outline: none;
-  overflow: hidden;
-  padding: 0 30px;
-  text-align: center;
-  text-decoration: none;
-  transform: translate3d(0, 0, 0);
-  transition: all 150ms;
-  vertical-align: baseline;
-  white-space: nowrap;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-}
 
-.google-button:hover {
-  box-shadow: rgba(0, 1, 0, .2) 0 2px 8px;
-  opacity: .85;
+h1,h2,h3,label,.glowing-btn{
+  /* font-size: 1.5rem; */
+  font-family: "Luckiest Guy", cursive;
+    font-weight: 400;
+    font-style: normal;     
 }
-
-.google-button:active {
-  outline: 0;
-}
-
-.google-button:focus {
-  box-shadow: rgba(0, 0, 0, .5) 0 0 0 3px;
-}
-
-@media (max-width: 420px) {
-  .google-button {
-    height: 48px;
-  }
-} */
