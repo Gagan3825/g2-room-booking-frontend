@@ -79,7 +79,8 @@ const Detailedcard = () => {
       <h1>{curData.name}</h1>
       <h1>Price: {curData.price}</h1>
       
-      <p>Max adults: 2</p>
+      <p>Description: <span class="description-text">{curData.description}</span></p>
+
       <button className='glowing-btn' onClick={()=>makepayment()}>Book Now</button>
 
       </div>
